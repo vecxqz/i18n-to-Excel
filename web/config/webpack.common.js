@@ -7,15 +7,10 @@ const ASSET_PATH = process.env.ASSET_PATH || '/';
 
 module.exports = {
     mode: 'development',
-    entry: path.resolve(__dirname, 'src/main.js'),
-    devServer: {
-        port: 8888,
-        progress: true,
-        contentBase: path.resolve(__dirname, "dist", "assets")
-    },
+    entry: path.resolve(__dirname, '../src/main.js'),
     output: {
         filename: 'js/[name].js',
-        path: path.resolve(__dirname, "dist", "assets"),
+        path: path.resolve(__dirname, "../dist", "assets"),
     },
     module: {
         rules: [{
@@ -45,7 +40,7 @@ module.exports = {
         new VueLoaderPlugin(),
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: path.resolve(__dirname, 'template/index.html'),
+            template: path.resolve(__dirname, '../template/index.html'),
             inject: true,
             publicPath: ASSET_PATH,
             title: 'vue',
