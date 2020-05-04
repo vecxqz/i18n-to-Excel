@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --mode development --config config/webpack.dev.js",
-    "build": "webpack --progress --mode production --config config/webpack.prod.js"
+    "dev": "cross-env webpack-dev-server --mode development --config config/webpack.dev.js",
+    "build": "cross-env ASSET_PATH=cdn webpack --progress --mode production --config config/webpack.prod.js"
   },
   "repository": {
     "type": "git",
@@ -26,12 +26,11 @@
   "devDependencies": {
     "@babel/core": "^7.8.4",
     "autoprefixer": "^9.7.4",
-    "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.2",
     "css-loader": "^3.4.2",
     "eslint": "^6.8.0",
-    "eslint-plugin-vue": "^6.2.1",
     "file-loader": "^5.1.0",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.13.1",

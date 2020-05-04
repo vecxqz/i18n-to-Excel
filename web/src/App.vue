@@ -1,15 +1,13 @@
+<script>
+export default {
+  name: "App",
+};
+</script>
+
 <template>
   <div id="app">
-      entry
+    entryaz
   </div>
 </template>
 
-<script>
-export default {
-    name:'App'
-}
-</script>
-
-<style>
-
-</style>
+<style></style>
